@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./Todo.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Todo extends Component {
   constructor(props) {
@@ -67,10 +70,10 @@ class Todo extends Component {
         {result}
         <div className='Todo-buttons'>
           <button onClick={this.toggleForm}>
-            <i class='fas fa-pen' />
+          <FontAwesomeIcon icon={faPen} />
           </button>
           <button onClick={this.handleRemove}>
-            <i class='fas fa-trash' />
+          <FontAwesomeIcon icon={faTrash} />
           </button>
         </div>
       </TransitionGroup>
